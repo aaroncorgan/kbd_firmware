@@ -71,50 +71,30 @@ void matrix_scan_user(void) {
         } else if (is_rm_pgdn_active) {
             tap_code(KC_PGDN);
         }
-        // Reset the timer
-        macro_timer = timer_read();
     }
 }
 
-// Define the macro for MKEY presses
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case TD_MKEY:
-            if (record->event.pressed) {
-                // This will be handled by the Tap Dance function
-            }
-            break;
-    }
-    return true;
-}
-
-// Define the tap dance actions
-void dance_finished(qk_tap_dance_state_t *state, void *user_data) {
+void dance_finished(tap_dance_state_t *state, void *user_data) {
     switch (state->count) {
         case 1:
-            tap_code16(A(KC_LSFT, KC_K)); // ALT+SHIFT+K
+            tap_code16(KC_K); // K
             break;
         case 2:
-            tap_code16(G(KC_L)); // WIN+L
+            tap_code16(LALT(KC_LSFT)); // ALT+SHIFT+K
             break;
         case 3:
-            tap_code16(C(KC_LSFT, KC_ESC)); // CTRL+SHIFT+ESC
+            tap_code16(LCTL(KC_LSFT)); // CTRL+SHIFT+ESC
             break;
     }
 }
 
-void dance_reset(qk_tap_dance_state_t *state, void *user_data) {
-    if (state->pressed) {
-        register_code16(C(A(KC_DEL))); // CTRL+ALT+DEL
-        unregister_code16(C(A(KC_DEL)));
-    }
+void dance_reset(tap_dance_state_t *state, void *user_data) {
+    // Reset any persistent state if needed
 }
 
-// Tap Dance action definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     [TD_MKEY_ACTION] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_finished, dance_reset),
 };
-
 enum combo_events {
     COMBO_Q_TILDE,
     COMBO_QW_1,
