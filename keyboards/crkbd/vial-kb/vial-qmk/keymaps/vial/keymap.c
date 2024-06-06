@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
         KC_TRNS, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_TRNS,    KC_TRNS, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
-        KC_TRNS, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_Y),                   KC_BTN1, KC_BTN2, KC_BTN3,  DM_REC1, DM_PLY1, KC_TRNS,
+        KC_TRNS, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_Y),                   KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX , XXXXXXX, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
                                         KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
     KC_TRNS, RGB_SPI, KC_MPRV, KC_VOLD, KC_MNXT, QK_BOOT, KC_TRNS,    KC_TRNS, KC_SCRL,  KC_F4,   KC_F5,  KC_F6,   KC_F11, KC_TRNS,
 //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
-    KC_TRNS, DM_REC2, DM_PLY2, KC_MRWD, KC_MFFD, DB_TOGG,                      KC_PAUS,  KC_F1,   KC_F2,   KC_F3,  KC_F10, KC_TRNS,
+    KC_TRNS, XXXXXXX, DM_PLY2, DM_REC2, DM_PLY1, DM_REC1,                      KC_PAUS,  KC_F1,   KC_F2,   KC_F3,  KC_F10, KC_TRNS,
 //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
                                         KC_MUTE, KC_MSTP, KC_MPLY,     KC_TRNS, KC_TRNS, KC_TRNS
                                     //`--------------------------'  `--------------------------'
