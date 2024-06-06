@@ -1,7 +1,29 @@
 {
     "name": "Corne v4",
     "vendorId": "0x4653",
-    "productId": "0x0004",
+    "productId": "0x0004", 
+    "customKeycodes": [
+        {"name": "RM_LBRC",
+         "title": "Rapid mode left bracket",
+         "shortName": "RM_LBRC"
+        },
+        {"name": "RM_RBRC",
+         "title": "Rapid mode right bracket",
+         "shortName": "RM_RBRC"
+        },
+        {"name": "RM_PGUP",
+         "title": "Rapid mode page up",
+         "shortName": "RM_PGUP"
+        },
+        {"name": "RM_PGDN",
+        "title": "Rapid mode page down",
+        "shortName": "RM_PGDN"
+        },
+        {"name": "TD_MKEY",
+        "title": "Tap Dance Macro Winkey",
+        "shortName": "TD_MKEY"
+        }
+    ],
     "matrix": {"rows": 8, "cols": 7},
     "lighting": "vialrgb",
     "layouts": {
