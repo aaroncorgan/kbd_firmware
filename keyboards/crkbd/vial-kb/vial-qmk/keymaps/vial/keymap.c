@@ -95,6 +95,24 @@ void dance_reset(tap_dance_state_t *state, void *user_data) {
 tap_dance_action_t tap_dance_actions[] = {
     [TD_MKEY_ACTION] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_finished, dance_reset),
 };
+
+combo_t key_combos[] = {
+    [COMBO_Q_TILDE] = COMBO_ACTION(combo_q_tilde),
+    [COMBO_QW_1] = COMBO_ACTION(combo_qw_1),
+    [COMBO_WE_2] = COMBO_ACTION(combo_we_2),
+    [COMBO_ER_3] = COMBO_ACTION(combo_er_3),
+    [COMBO_RT_4] = COMBO_ACTION(combo_rt_4),
+    [COMBO_TAB_A_SHIFT_TAB] = COMBO_ACTION(combo_tab_a_shift_tab),
+    [COMBO_ZX_CTRL_Z] = COMBO_ACTION(combo_zx_ctrl_z),
+    [COMBO_XC_CTRL_X] = COMBO_ACTION(combo_xc_ctrl_x),
+    [COMBO_CV_CTRL_C] = COMBO_ACTION(combo_cv_ctrl_c),
+    [COMBO_VB_CTRL_V] = COMBO_ACTION(combo_vb_ctrl_v),
+    [COMBO_YU_LBRACKET] = COMBO_ACTION(combo_yu_lbracket),
+    [COMBO_UI_RBRACKET] = COMBO_ACTION(combo_ui_rbracket),
+    [COMBO_IO_LPAREN] = COMBO_ACTION(combo_io_lparen),
+    [COMBO_OP_RPAREN] = COMBO_ACTION(combo_op_rparen)
+};
+
 enum combo_events {
     COMBO_Q_TILDE,
     COMBO_QW_1,
@@ -129,23 +147,6 @@ const uint16_t PROGMEM combo_yu_lbracket[] = {KC_Y, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_ui_rbracket[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM combo_io_lparen[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_op_rparen[] = {KC_O, KC_P, COMBO_END};
-
-combo_t key_combos[] = {
-    [COMBO_Q_TILDE] = COMBO_ACTION(combo_q_tilde),
-    [COMBO_QW_1] = COMBO_ACTION(combo_qw_1),
-    [COMBO_WE_2] = COMBO_ACTION(combo_we_2),
-    [COMBO_ER_3] = COMBO_ACTION(combo_er_3),
-    [COMBO_RT_4] = COMBO_ACTION(combo_rt_4),
-    [COMBO_TAB_A_SHIFT_TAB] = COMBO_ACTION(combo_tab_a_shift_tab),
-    [COMBO_ZX_CTRL_Z] = COMBO_ACTION(combo_zx_ctrl_z),
-    [COMBO_XC_CTRL_X] = COMBO_ACTION(combo_xc_ctrl_x),
-    [COMBO_CV_CTRL_C] = COMBO_ACTION(combo_cv_ctrl_c),
-    [COMBO_VB_CTRL_V] = COMBO_ACTION(combo_vb_ctrl_v),
-    [COMBO_YU_LBRACKET] = COMBO_ACTION(combo_yu_lbracket),
-    [COMBO_UI_RBRACKET] = COMBO_ACTION(combo_ui_rbracket),
-    [COMBO_IO_LPAREN] = COMBO_ACTION(combo_io_lparen),
-    [COMBO_OP_RPAREN] = COMBO_ACTION(combo_op_rparen)
-};
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
     switch(combo_index) {
