@@ -117,9 +117,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
         KC_TRNS, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_TRNS,    KC_TRNS, KC_WH_D, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
-        KC_TRNS, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_Y),                   KC_BTN1, KC_BTN2, KC_BTN2,  DM_REC1, DM_PLY1, KC_TRNS,
+        KC_TRNS, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_Y),                   KC_BTN1, KC_BTN2, KC_BTN3,  DM_REC1, DM_PLY1, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
-                                        KC_TRNS, KC_TRNS, KC_TRNS,    KC_BTN3, KC_BTN2, KC_BTN1
+                                        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
 ),
 
